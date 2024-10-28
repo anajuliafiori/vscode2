@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Testes de Javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<script>
+    document.write("<p id=par>" + document.title + "<p>")
+</script>
+
+<style>
+    img {
+        width: 20%;
+        height: 20%;
+    }
+
+    .ex {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: bold;
+        font-size: 32px;
+        color: blue;
+    }
+
+    .image {
+        text-align: center;
+    }
+
+    .fim {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: black;
+    }
+
+    #par {
+        color: red;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 48px;
+        text-align: center;
+        border: 2px solid purple;
+    }
+
+    #confirma {
+        color: white;
+        background-color: green;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+
+    #cancela {
+        color: white;
+        background-color: red;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+
+    #limpa {
+        background-color: yellow;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <p class="ex"><u>Exercício 4</u></p>
+    <button id="confirma" type="button" onclick="alert('Confirmado!')">Confirma</button>
+    <button id="cancela" type="button" onclick="alert('Cancelado!')">Cancela</button>
+    <button id="limpa" type="button" onclick="alert('Limpo!')">Limpa</button>
+
+    <p class="image">
+        <a href=""
+            onclick="alert('JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc.')"><img
+                src="/_image/images.png" alt="lalala"></a>
+    </p>
+    <p class="fim">Clique no botão para imprimir a página atual.</p>
+    <button onclick="window.print()">Imprimir</button>
+</body>
+
+</html>

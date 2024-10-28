@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Par ou Ímpar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    h1{
+        color: darkmagenta;
+    }
+</style>
+<body>
+    <h1>Veja se o Número é Par ou Ímpar</h1>
+
+    <script>
+        num = prompt("Insira um número inteiro: ");
+        num = parseInt(num);
+        resto = num % 2
+
+        if(resto == 0){
+            document.write("O número ","<b>", num, "</b>", " é <b>Par</b>",);
+        }else{
+            document.write("O número ", "<b>", num, "</b>", " é <b>Ímpar</b>",);
+        }
+    </script>
+</body>
+</html>

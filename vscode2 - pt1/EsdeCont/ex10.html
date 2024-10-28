@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Semana</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    body {
+        background-color: lightyellow;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+    }
+
+    #domingo {
+        color: red;
+    }
+
+    #segunda {
+        color: blue;
+    }
+
+    #terca {
+        color: green;
+    }
+
+    #quarta {
+        color: black;
+    }
+
+    #quinta {
+        color: brown;
+    }
+
+    #sexta {
+        color: violet;
+    }
+
+    #sabado {
+        color: gray;
+    }
+</style>
+
+<body>
+    <h2>Semana</h2>
+
+    <script>
+        dia = prompt("Insira um número de 1 a 7 representando os dias da semana: ");
+
+        switch (dia) {
+            case "1":
+                document.write("<p id= domingo>", "Domingo", "</p>");
+                break;
+            case "2":
+                document.write("<p id= segunda>", "Segunda-Feira", "</p>");
+                break;
+            case "3":
+                document.write("<p id= terca>", "Terça-Feira", "</p>");
+                break;
+            case "4":
+                document.write("<p id= quarta>", "Quarta-Feira", "</p>");
+                break;
+            case "5":
+                document.write("<p id= quinta>", "Quinta-Feira", "</p>");
+                break;
+            case "6":
+                document.write("<p id= sexta>", "Sexta-Feira", "</p>");
+                break;
+            case "7":
+                document.write("<p id= sabado>", "Sábado", "</p>");
+                break;
+            default:
+                document.write("Número Inválido.");
+        }
+    </script>
+</body>
+
+</html>

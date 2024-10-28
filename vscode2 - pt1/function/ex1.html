@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Operações</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2{
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <script>
+
+        document.write("<h2>", "Exercício 1", "</h2><br>");
+
+        let num1 = prompt("Digite o primeiro número:");
+        let num2 = prompt("Digite o segundo número:");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        function sum(num1,num2){
+            return num1 + num2;
+        }
+        let result = sum(num1,num2);
+        document.write("<p>", "O resultado da soma de ", num1, " + ", num2, " é: ","<b>",result,"</b>", "</p>");
+
+        
+        function sub(num1,num2){
+            return num1 - num2;
+        }
+        let result1 = sub(num1,num2);
+        document.write("<br><p>", "O resultado da subtração de ", num1, " - ", num2, " é: ","<b>",result1,"</b>", "</p>");
+
+
+
+        function mult(num1,num2){
+            return num1 * num2;
+        }
+        let result2 = mult(num1,num2);
+        document.write("<br><p>", "O resultado da multiplicação de ", num1, " x ", num2, " é: ","<b>",result2,"</b>", "</p>");
+
+
+
+        function divi(num1,num2){
+            return num1 / num2;
+        }
+        let result3 = divi(num1,num2);
+        document.write("<br><p>", "O resultado da divisão de ", num1, " / ", num2, " é: ","<b>",result3,"</b>", "</p>");
+
+
+
+        function porc(){
+            return result * 0.252;
+        }
+        let result4 = porc(result,0.252);
+        document.write("<br><p>", "25,2% de ", num1, " + ", num2, " é: ","<b>",result4,"</b>", "</p>");
+
+
+
+        function media(num1,num2){
+            return (num1 + num2) / 2;
+        }
+        let result5 = media(num1,num2);
+        document.write("<br><p>", "A média entre os números é de: ","<b>", result5,"</b>", "</p>");
+
+
+
+        function quad(){
+            return result * result;
+        }
+        let result6 = quad(result);
+        document.write("<br><p>", "O quadrado do resultado da soma é de: ","<b>", result6,"</b>", "</p>");
+
+
+
+        function raiz(){
+            return Math.sqrt(result);
+        }
+        let result7 = raiz(result);
+        document.write("<br><p>", "A raiz do resultado da soma é de: ","<b>", result7,"</b>", "</p>");
+    </script>
+</body>
+
+</html>

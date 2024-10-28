@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculando Média</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        nome = prompt("Insira seu nome: ");
+        n1 = parseFloat(prompt("Digite sua primeira nota: "));
+        n2 = parseFloat(prompt("Digite sua segunda nota: "));
+        n3 = parseFloat(prompt("Digite sua terceira nota: "));
+
+        media = (n1 + n2 + n3) / 3
+
+        document.write("<p>", "Aluno: ", "<b>", nome, "</p>");
+        document.write("<p>", "Nota 1: ", "<b>", n1, "</p>");
+        document.write("<p>", "Nota 2: ", "<b>", n2, "</p>");
+        document.write("<p>", "Nota 3: ", "<b>", n3, "</p>");
+        document.write("<p>", "Média: ", "<b>", media, "</p>");
+        
+        if(media >= 7){
+            document.write("<p id=aprovado>", "<br>", "APROVADO!!","</p>");  
+        }else if(media >= 5.1 && media <= 6.9){
+            document.write("<p id=recuperar>", "<br>", "RECUPERAÇÃO.","</p>");  
+        }else{
+            document.write("<p id= reprovado>", "<br>", "REPROVADO.","</p>")
+        }
+    </script>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #aprovado{
+        color: green;
+        font-size: large;
+    }
+
+    #recuperar{
+        font-size: large;
+    }
+
+    #reprovado{
+        color: red;
+        font-size: large;
+    }
+
+</style>
+<body>
+    
+</body>
+</html>

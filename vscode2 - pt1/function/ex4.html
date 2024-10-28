@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Caracteres</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        background-color: pink;
+    }
+
+    button{
+        border: solid 2px rgb(148, 16, 60);
+        border-radius: 4px;
+        color: white;
+        background-color: palevioletred;
+        padding: 10px;
+    }
+</style>
+<body>
+    <h2>Exercícios 4</h2>
+    <button id = "submitButton">Gerar caracteres</button>
+    <script>
+        function numeros(){
+            num = []
+            num.push (prompt ("Digite o primeiro número: " ));
+            num.push (prompt ("Digite o segundo número: " ));
+            num.push (prompt ("Digite o terceiro número: " ));
+            num.push (prompt ("Digite o quarto número: " ));
+            num.push (prompt ("Digite o quinto número: " ));
+            document.write("Os números na sequência ordenada são: ", num.sort() );
+        }
+        document.getElementById("submitButton").addEventListener("click", function(){
+            numeros();
+        })
+    </script>
+</body>
+</html>

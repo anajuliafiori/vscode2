@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Super Açaiajin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css.cs'>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: rgb(129, 0, 168);
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        background-color: rgb(238, 0, 255);
+    }
+
+    p {
+        text-align: center;
+        color: white;
+    }
+
+    table {
+        border: 1.5px solid black;
+        background-color: white;
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border: 1.5px solid black;
+    }
+
+    th {
+        background-color: rgb(101, 4, 136);
+        color: white;
+
+    }
+
+    button {
+        display: flex;
+        margin-left: 46%;
+        color: darkviolet;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <h1>Super Açai SuperAçaiajin</h1>
+    <p>Seja bem-vindo(a) ao SuperAçaiajin</p>
+    <p>Escolha um dos tamanhos abaixo para continuar:</p>
+    <table>
+        <tr>
+            <th>Tamanho</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Pequeno (P)</td>
+            <td>R$ 10,00</td>
+        </tr>
+        <tr>
+            <td>Médio (M)</td>
+            <td>R$ 20,00</td>
+        </tr>
+        <tr>
+            <td>Grande (G)</td>
+            <td>R$ 30,00</td>
+        </tr>
+    </table>
+    <script>
+
+        function calcularValor(tamanho) {
+            switch (tamanho) {
+                case 'P':
+                    return 10.00;
+                case 'M':
+                    return 20.00;
+                case 'G':
+                    return 30.00;
+                default:
+                    return "Tamanho inválido";
+            }
+        }
+
+        function calcularValorCartao(valor) {
+            return valor * 1.05;
+        }
+
+        function calcularTroco(valor, pago) {
+            if (pago < valor) {
+                return `Falta R$ ${valor - pago} para completar o pagamento`;
+            } else if (pago > valor) {
+                return `Troco: R$ ${pago - valor}`;
+            } else {
+                return "Pagamento realizado com sucesso";
+            }
+        }
+
+        let tamanho;
+        let formaPagamento;
+        let valorTotal;
+        let pago;
+
+
+        tamanho = prompt("Escolha o tamanho do açaí (P, M ou G): ");
+        valorTotal = calcularValor(tamanho);
+        formaPagamento = prompt("Escolha a forma de pagamento, sendo Dinheiro (D) ou Cartão (C): ");
+
+        switch (formaPagamento) {
+            case 'D':
+                pago = parseFloat(prompt("Insira o valor pago: "));
+                alert(calcularTroco(valorTotal, pago));
+                break;
+            case 'C':
+                valorTotal = calcularValorCartao(valorTotal);
+                alert(`Valor a ser pago no cartão: R$ ${valorTotal}`);
+                break;
+            default:
+                alert("Opção inválida.");
+        }
+    </script>
+</body>
+
+</html>

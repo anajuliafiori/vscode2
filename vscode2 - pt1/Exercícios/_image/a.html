@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Testes de Javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+        #confirma {
+        color: white;
+        background-color: green;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+
+    #cancela {
+        color: white;
+        background-color: red;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+
+    #limpa {
+        background-color: yellow;
+        width: 50;
+        height: 30;
+        border-radius: 10px;
+    }
+
+    p {
+        color: red;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 48px;
+        text-align: center;
+        border: 2px solid purple;
+    }
+</style>
+<body>
+    <p class="ex"><u>Exercício 4</u></p>
+    <button id="confirma" type="button" onclick="alert('Confirmado!')">Confirma</button>
+    <button id="cancela" type="button" onclick="alert('Cancelado!')">Cancela</button>
+    <button id="limpa" type="button" onclick="alert('Limpo!')">Limpa</button>
+
+    <script>
+        document.write("<p>" + document.title + "<p>")
+    </script>

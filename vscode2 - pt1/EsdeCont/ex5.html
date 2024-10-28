@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Simulação Calculadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<style>
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 22px;
+    }
+
+    #par1{
+        color: blue;
+    }
+
+    #par2{
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>Simulação Calculadora</h1>
+
+    <script>
+        num1 = prompt("Insira um número: ");
+        num2 = prompt("Insira outro número: ");
+        operador = prompt("Insira a operação que você deseja realizar: ");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        switch (operador) {
+            case "+":
+                var soma = num1 + num2
+                document.write("<p id=par1>", "Operação: ", num1, " + ", num2, "</p>");
+                document.write("<p id=par2>", "Resultado da Adição = ", soma, "</p>");
+                break;
+            case "-":
+                var sub = num1 - num2
+                document.write("<p id=par1>", "Operação: ", num1, " - ", num2, "</p>");
+                document.write("<p id=par2>", "Resultado da Subtração = ", sub, "</p>");
+                break;
+            case "*":
+                var mult = num1 * num2
+                document.write("<p id=par1>", "Operação: ", num1, " x ", num2, "</p>");
+                document.write("<p id=par2>", "Resultado da Multiplicação = ", mult, "</p>");
+                break;
+            case "/":
+                var divi = num1 / num2
+                document.write("<p id=par1>", "Operação: ", num1, " / ", num2, "</p>");
+                document.write("<p id=par2>", "Resultado da Divisão = ", divi, "</p>");
+                break;
+            default:
+                document.write("Operação Inválida");
+        }
+    </script>
+
+</body>
+
+</html>

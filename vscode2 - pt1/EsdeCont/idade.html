@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Checar Idade</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        var idade = prompt("Digite sua idade: ")
+        if(idade > 15 && idade < 18 || idade > 70){
+            document.write("O voto é opcional");
+        }else if(idade < 16){
+            document.write("Você não pode votar");
+        }else{
+            document.write("Você é obrigado a votar");
+        }
+    </script>
+</head>
+<body></body>
+</html>

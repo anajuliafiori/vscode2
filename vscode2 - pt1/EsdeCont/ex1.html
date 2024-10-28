@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IMC</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        peso = parseFloat(prompt("Digite seu peso em kg: "));
+        altura = parseFloat(prompt("Digite sua altura em metros: "));
+
+        imc = peso / (altura * altura); 
+        if(imc < 17){
+            document.write("Você está muito abaixo do peso: ", "<b>", imc);
+        }else if(imc >= 17 && imc <= 18.49 ){
+            document.write("Abaixo do peso: ", "<b>", imc);
+        }else if(imc >= 18.5 && imc <= 24.99 ){
+            document.write("Peso normal: ", "<b>", imc);
+        }else if(imc >= 25 && imc <= 29.99 ){
+            document.write("Acima do Peso: ", "<b>", imc);
+        }else if(imc >= 30 && imc <= 34.99 ){
+            document.write("Obesidade I: ", "<b>", imc);
+        }else{
+            document.write("Obesidade II: ", "<b>", imc);
+        }
+    </script>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    
+</body>
+</html>

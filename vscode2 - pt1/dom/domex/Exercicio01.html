@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Aplicando DOM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    h1{
+        color:rgb(157, 0, 52); ;
+    }
+
+    button{
+        color: white;
+        background-color: rgb(157, 0, 52);
+        border: solid pink 2px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    hr{
+        border: solid 0.5px rgb(157, 0, 52);
+    }
+
+    .pink-mode {
+        background-color: pink;
+        color: rgb(157, 0, 52);
+    }
+
+    .light-mode {
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>Aplicando DOM</h1>
+    <hr>
+    <p id="meuParagrafo">Este é o meu parágrafo.</p>
+    <button id="botao1" onclick="mudarTexto()">Mudar Texto</button><br><br><hr>
+
+    <input type="text" name="meuInput"><br><br>
+    <button id="botao2" onclick="mostrarValor()">Mostrar Valor</button>
+    <p id="resultado"></p><br><hr>
+
+    <button id="botao3" onclick="adicionarParagrafo()">Adicionar Parágrafo</button><br><br><hr>
+
+    <button id="botao4" onclick="adicionarTexto()">Adicionar Texto</button><br><br><hr>
+
+
+    <h3 id="PinkModetext">Tema rosa DESLIGADO</h3>
+    <button onclick="pinkMode()">Pinkmode</button>
+    <button onclick="lightMode()">Lightmode</button><br><br>
+    <hr>
+
+
+    <script>
+        function mudarTexto() {
+            var p = document.getElementById("meuParagrafo");
+
+            p.textContent = "Novo conteúdo do parágrafo!";
+        }
+
+        function mostrarValor() {
+            var input = document.getElementsByName("meuInput")[0];
+            var resultado = document.getElementById("resultado");
+
+            resultado.textContent = "Valor do input: " + input.value;
+        }
+
+        function pinkMode() {
+            var element = document.body;
+            var content = document.getElementById("PinkModetext");
+            element.className = "pink-mode";
+            content.innerText = "Tema rosa ATIVADO";
+        }
+
+        function lightMode() {
+            var element = document.body;
+            var content = document.getElementById("PinkModetext");
+            element.className = "light-mode";
+            content.innerText = "Tema rosa DESATIVADO";
+        }
+
+        function adicionarParagrafo() {
+            var p = document.createElement("p");
+
+            p.textContent = "Este é um novo parágrafo!";
+
+            document.body.appendChild(p);
+        }
+
+        function adicionarTexto() {
+            var text = document.createTextNode("Esse é um novo texto!");
+
+            document.body.appendChild(text);
+        }
+    </script>
+</body>
+
+</html>

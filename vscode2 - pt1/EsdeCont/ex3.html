@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Ímpares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Números Ímpares</h1>
+
+    <script>
+        for(i=0; i < 101; i++){
+            resto = i % 2
+            if(resto > 0){
+            document.write("<p>" + i + "</p>")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

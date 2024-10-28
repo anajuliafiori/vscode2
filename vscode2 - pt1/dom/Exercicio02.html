@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Animais</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(184, 227, 225);
+            text-align: center;
+        }
+
+        h1{
+            color: rgb(1, 83, 83);
+            text-align: center;
+        }
+        
+        img {
+            width: 30%;
+            height: 30%;
+            margin: 10px;
+        }
+
+        button{
+            color: white;
+            background-color: lightseagreen;
+            padding: 10px;
+            border: solid 2px darkcyan;
+            border-radius: 5px;
+        }
+
+        .image-gato {
+            display: inline-block;
+            position: relative;
+        }
+
+        .image-gato img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-gato:hover img {
+            transform: scale(1.2);
+        }
+
+        .image-cachorro {
+            display: inline-block;
+            position: relative;
+        }
+
+        .image-cachorro img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-cachorro:hover img {
+            transform: scale(1.2);
+        }
+
+        .image-hawk {
+            display: inline-block;
+            position: relative;
+        }
+
+        .image-hawk img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-hawk:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Clique para mostrar os animais: </h1>
+    <button onclick="gato()">Visualizar Gato</button>
+
+    <button onclick="cachorro()">Visualizar Cachorro</button>
+
+    <button onclick="passaro()">Visualizar Pássaro</button>
+
+    <div class="image-gato">
+        <p id="demo"></p>
+    </div>
+
+    <div class="image-cachorro">
+        <p id="demo2"></p>
+    </div>
+
+    <div class="image-hawk">
+        <p id="demo3"></p>
+    </div>
+
+    <script>
+        function gato() {
+            var cat = document.getElementById("demo")
+            cat.innerHTML = "<img src=/_media/cat2.png>"
+        }
+
+        function cachorro() {
+            var dog = document.getElementById("demo2")
+            dog.innerHTML = "<img src=/_media/dog.png>"
+
+        }
+
+        function passaro() {
+            var hawk = document.getElementById("demo3")
+            hawk.innerHTML = "<img src=/_media/hawk.png>"
+        }
+
+    </script>
+</body>
+
+</html>

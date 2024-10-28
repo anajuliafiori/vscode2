@@ -1,0 +1,54 @@
+Algoritmo "A�a�"
+
+Var
+   pagamento: Caractere
+   valor, troco, faltante: Real
+   tamanho: Inteiro
+
+Inicio
+   Escreval("Seja bem-vindo � loja Super A�aiajin.")
+   Escreval("Escolha um dos tamanhos de a�a� do nosso card�pio (Determine com o pre�o do produto).")
+   Escreval(" ")
+   Escreval("Pequeno .................... R$10,00")
+   Escreval("M�dio ...................... R$15,00")
+   Escreval("Grande ..................... R$20,00")
+   Leia(tamanho)
+   Escreval(" ")
+   faltante <- tamanho
+   Enquanto faltante > 0.0 faca
+      Escreval("Determine a forma de pagamento: DINHEIRO (D) ou CART�O (C)")
+      Leia(pagamento)
+      pagamento <- Maiusc(pagamento)
+      Escolha(pagamento)
+      Caso "D"
+         Escreval("Digite o valor a ser pago pelo seu a�a�.")
+         Leia(valor)
+         faltante <- faltante - valor
+         Se faltante > 0 Entao
+            Escreval("� necess�rio pagar R$", faltante)
+         Senao
+            troco <- -faltante
+            Escreval("Troco: R$", troco)
+            faltante <- 0
+         Fimse
+      Caso "C"
+         faltante <- faltante * 1.05
+         Escreval("Valor total a ser pago: R$", faltante)
+         faltante <- 0
+      Outrocaso
+         Escreval("Op��o de pagamento inv�lida!")
+      Fimescolha
+   Fimenquanto
+Fimalgoritmo
+
+    if(pag = "D"){
+        calc = prompt("Insira o Valor Pago: "); 
+        troco = calc - 15 
+        if(calc > 15){
+            document.write("<p>", "Troco de: R$", troco, "</p>"); 
+        }else if{
+
+        }
+    }else if(pag = "C"){
+        document.write("a");
+    }

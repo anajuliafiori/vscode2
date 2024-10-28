@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Categorias</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script></script>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        background-color: pink;
+    }
+
+    button{
+        border: solid 2px rgb(148, 16, 60);
+        border-radius: 4px;
+        color: white;
+        background-color: palevioletred;
+        padding: 10px;
+    }
+</style>
+<body>
+
+    <h2>Exercício 8</h2>
+
+    <button id="CheckButton">Checar a categoria de Habilitação</button>
+
+    <script>
+        function checar() {
+            let nome = prompt("Digite seu nome: ");
+            let categoria = prompt("Digite a letra/categoria de A até E presente em sua carteira: ");
+            switch (categoria) {
+                case "A":
+                    document.write(nome,","," você pode dirigir Motos e Triciclos. ");
+                    break;
+                case "B":
+                    document.write(nome,","," você pode dirigir carros de passeio.");
+                    break;
+                case "C":
+                    document.write(nome,","," você pode dirigir veículos de carga acima de 3,5 toneladas.");
+                    break;
+                case "D":
+                    document.write(nome, ","," você pode dirigir veículos com + de 8 passageiros.");
+                    break;
+                case "E":
+                    document.write(nome,","," você pode dirigir veículos com unidade aclopada acima de 6 toneladas.");
+                    break;
+                default:
+                    document.write("Não existe essa categoria.");
+            }
+        }
+
+        document.getElementById("CheckButton").addEventListener("click", function () {
+            checar();
+        })
+
+    </script>
+</body>
+
+</html>
